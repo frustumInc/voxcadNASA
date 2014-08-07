@@ -2,6 +2,10 @@
 #include "VX_Object.h"
 #include "VX_Environment.h"
 #include "VX_Sim.h"
+#include <GL/glut.h>
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <GL/glext.h>
 
 
 int main(int argc, char *argv[])
