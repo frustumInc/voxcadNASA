@@ -8,6 +8,87 @@
 #include <highgui.h>
 
 
+void endSimulation(){
+
+	//TODO: put in stress writing feature
+	int count = 0;
+	Vec3D sum = Vec3D(0,0,0);
+	vector<double> voxStress;
+	double stress = 0.0;
+	for(int i=0; i<Simulator.NumVox(); i++){
+		Vec3D vec = Vec3D(0,0,0);
+		
+		vec = Simulator.VoxArray[i].S.Pos;
+		stress = Simulator.VoxArray[i].CurMaxStress;
+		voxStress.push_back(stress);
+		sum = sum + vec;
+		count = count++;
+	}
+	sum = sum/count;
+	cout << "X : "<< sum.x <<"\n";
+	cout << "Y : "<< sum.y <<"\n";
+	cout << "Z : "<< sum.z <<"\n";
+
+	float height = 0;
+	for(int i=0; i<Simulator.NumVox(); i++){
+		Vec3D vec = Vec3D(0,0,0);
+		
+		vec = Simulator.VoxArray[i].S.Pos;
+
+		if( vec.z > height){
+			height = vec.z;
+		}
+
+	}
+	cout << "Z : "<< height <<"\n";
+
+	int profileCount = 0;
+	for(int i=0; i<Simulator.NumVox(); i++){
+		Vec3D vec = Vec3D(0,0,0);
+		
+		vec = Simulator.VoxArray[i].S.Pos;
+
+		if( vec.z > 100*scale && vec.z < 120*scale){
+			profileCount = profileCount+1;
+		}
+
+	}
+	cout << "Z : "<< height <<"\n";
+
+	
+	std::ofstream myfile;
+    myfile.open (dir + ":/WORKFLOW_trabecularOptimization/trabecularOptimization/VoxData.txt");
+    myfile << "Max Strain :" << "\t" << Simulator.MaxBondStrain << "\n";
+	myfile << "Max Stress :" << "\t" << Simulator.MaxBondStress << "\n"; 
+    myfile << "Max Displacement :" << "\t" << Simulator.MaxVoxDisp << "\n";
+	myfile << "Max Displacement X :" << "\t" << Simulator.TotalObjDisp.x  << "\n";
+	myfile << "Max Displacement Y :" << "\t" << Simulator.TotalObjDisp.y  << "\n";
+	myfile << "Max Displacement Z :" << "\t" << Simulator.TotalObjDisp.z  << "\n";
+	myfile << "Avg Displacement :" << "\t" << sum.Length() << "\n";
+	myfile << "Avg Displacement X :" << "\t" << sum.x << "\n";
+	myfile << "Avg Displacement Y :" << "\t" << sum.y << "\n";
+	myfile << "Avg Displacement Z :" << "\t" << sum.z << "\n";
+	myfile << "Max Height :" << "\t" << height << "\n";
+	myfile << "phase2profileCount :" << "\t" << profileCount << "\n";
+	myfile << "Voxel Failures :" << "\t" << Simulator.NumBroken() << "\n"; 
+	myfile << "Voxel Stresses :" << "\n"; 
+
+	for(int i=0; i<voxStress.size(); i++){
+		double s = voxStress[i];
+		myfile << s << ",";
+	}
+
+    myfile.close();
+    
+	// Object.SaveVXCFile(dir + ":/WORKFLOW_trabecularOptimization/trabecularOptimization/iteration.vxc");
+	Simulator.SaveVXAFile(dir + ":/WORKFLOW_trabecularOptimization/trabecularOptimization/iteration.vxa");
+	cout << "\n\n";
+	
+	//Simulator.VoxMesh.ToStl(dir + ":/WORKFLOW_trabecularOptimization/trabecularOptimization/mesh.stl", Simulator.pEnv->pObj, true);
+
+	exit(1);
+}
+
 // void CaptureViewPort(){ 
 // 	GLubyte * bits; 
 // 	GLint viewport[4]; 
