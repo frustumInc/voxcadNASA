@@ -13,10 +13,11 @@ CXX=g++
 CC=g++
 #INCLUDE=-I./zlib-1.2.5 -I./Voxelyze -I./TinyXML
 # INCLUDE= -I./Voxelyze -I./Voxelyze/Utils -l./Voxelyze/Utils/zlib
-INCLUDE= -I./Voxelyze -I./Voxelyze/Utils -lglut -lGL -lGLU
+INCLUDE= -I./Voxelyze -I./Voxelyze/Utils # -I/usr/include/opencv -L /usr/local/lib 
 # CFLAGS= -xhost -O3 -Wall $(INCLUDE)
 CFLAGS= -O3 -Wall $(INCLUDE)
 CPPFLAGS= $(CFLAGS)
+
 
 Vox_src=\
 Voxelyze/Utils/XML_Rip.cpp\
@@ -30,6 +31,7 @@ Voxelyze/VX_FRegion.cpp\
 Voxelyze/VX_FEA.cpp\
 Voxelyze/VX_Environment.cpp\
 Voxelyze/Utils/Mesh.cpp\
+Voxelyze/Utils/GL_Utils.cpp\
 Voxelyze/main.cpp
 
 tinyxml_src=\
@@ -96,7 +98,7 @@ all: voxelize
 # 	icc -c $(CFLAGS) $< -o $@
 
 voxelize: $(OBJECT_FILES)
-	$(CC) $(CFLAGS) $(INCLUDE) $^ -o $@
+	$(CC) $(CFLAGS) $(INCLUDE) $^ -o $@ -lGL -lglut -lcxcore -lcv -lhighgui `pkg-config --cflags opencv --libs opencv`
 
 #vox.o: $(Vox_src)#
 #	$(CC) $(CFLAGS) $(INCLUDE) $(Vox_src)

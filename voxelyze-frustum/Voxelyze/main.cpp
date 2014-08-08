@@ -2,14 +2,50 @@
 #include "VX_Object.h"
 #include "VX_Environment.h"
 #include "VX_Sim.h"
+#include <stdlib.h>
 #include <GL/glut.h>
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include <GL/glext.h>
+#include <cv.h>
+#include <highgui.h>
 
 
-int main(int argc, char *argv[])
-{
+// void CaptureViewPort(){ 
+// 	GLubyte * bits; 
+// 	GLint viewport[4]; 
+// 			         
+// 	glGetIntegerv(GL_VIEWPORT, viewport); 
+// 				     
+// 	int w = viewport[2]; 
+// 	int h = viewport[3]; 
+// 						         
+// 	bits = new GLubyte[w*3*h]; 
+// 							     
+// 	glFinish(); 
+// 	glPixelStorei(GL_PACK_ALIGNMENT,1); 
+// 	glPixelStorei(GL_PACK_ROW_LENGTH, 0); 
+// 	glPixelStorei(GL_PACK_SKIP_ROWS, 0); 
+// 	glPixelStorei(GL_PACK_SKIP_PIXELS, 0); 
+// 	glReadPixels(0, 0, w, h, GL_BGR_EXT, GL_UNSIGNED_BYTE, bits); 
+// 													     
+// 	IplImage * capImg = cvCreateImage( cvSize(w,h), IPL_DEPTH_8U, 3); 
+// 	for(int i=0; i < h; ++i){ 
+// 		for(int j=0; j < w; ++j){ 
+// 			capImg->imageData[i*capImg->widthStep + j*3+0] = (unsigned char)(bits[(h-i-1)*3*w + j*3+0]); 
+// 			capImg->imageData[i*capImg->widthStep + j*3+1] = (unsigned char)(bits[(h-i-1)*3*w + j*3+1]); 
+// 			capImg->imageData[i*capImg->widthStep + j*3+2] = (unsigned char)(bits[(h-i-1)*3*w + j*3+2]); 
+// 		} 
+// 	}
+// 	cvSaveImage("result.jpg",capImg);
+// 	cvReleaseImage(&capImg);
+// 	delete[] bits;
+// }
+
+void display(){
+
+//	CaptureViewPort();
+	exit(1);
+}
+
+int main(int argc, char *argv[]){
 	char* InputFile;
 	//create the three main objects
 	CVXC_Structure structure;
@@ -89,9 +125,8 @@ int main(int argc, char *argv[])
 	// }
 
 
-	while (not Simulator.StopConditionMet())
-	{
-
+	// while (not Simulator.StopConditionMet()){
+	for(int i=0; i<5000; i++){
 		//do some reporting via the stdoutput if required
 		if (Step%1000 == 0.0 && /*Simulator.*/print_scrn) //Only output every n time steps
 		// if (fmod(Time,0.001) < 0.00000001  && /*Simulator.*/print_scrn) //Only output every n time steps
@@ -131,7 +166,7 @@ int main(int argc, char *argv[])
 		// Simulator.pEnv->UpdateCurTemp(Time);	//pass in the global time, and a pointer to the local object so its material temps can be modified (nac: pointer removed for debugging)
 		// nac: not needed for non-cyclic actuations:  Simulator.pEnv->UpdateCurTime(Time);	//just pass in the Simulation time to the Environment (currently used only for calculating phase of actuations)
 		// std::cout << "here3" << std::endl;
-		
+		i = i+1;
 	}
 
 	if (print_scrn) std::cout<<"Ending at: "<<Time<<std::endl;
@@ -145,6 +180,9 @@ int main(int argc, char *argv[])
 	// }
 
 	// Simulator.SaveResultFile(Simulator.FitnessFileName);
+	// putenv((char *)"DISPLAY=:1");
+
+	// glutInit(&argc, argv); // Initialize GLUT
 
 	return 1;	//code for successful completion
-	}
+}
