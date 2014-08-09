@@ -12,6 +12,29 @@ CVX_Object Object;
 CVX_Environment Environment;
 CVX_Sim Simulator;
 
+void camera (void) {
+	double scale = 1.0;
+	gluLookAt ( -472.236*scale, -459.546*scale, 271.046*scale,      127.082*scale, 50.498*scale, 33.481*scale,   0, 0, 1 );
+}
+
+void enable (void) {
+    glEnable (GL_DEPTH_TEST); //enable the depth testing
+    //glEnable (GL_LIGHTING); //PROBLEMS!!!
+	//glEnable(GL_COLOR_MATERIAL);
+    //glEnable (GL_LIGHT0); //enable LIGHT0, our Diffuse Light
+    glShadeModel (GL_SMOOTH); //set the shader to smooth shader
+
+}
+
+void reshape (int w, int h) {
+    glViewport (0, 0, (GLsizei)w, (GLsizei)h); //set the viewportto the current window specifications
+    glMatrixMode (GL_PROJECTION); //set the matrix to projection
+
+    glLoadIdentity ();
+    gluPerspective (10, (GLfloat)w / (GLfloat)h, .1, 100000); //set the perspective (angle of sight, width, height, nearClip, farClip)
+    glMatrixMode (GL_MODELVIEW); //set the matrix back to model
+}
+
 void endSimulation(){
 	std::ofstream myfile;
     myfile.open ("data.txt");
@@ -64,11 +87,17 @@ void CaptureViewPort(){
 	delete[] bits;
 }
 
-void display(){
-
+void display (void) {  
+	glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Clear the background of our window to red  
+	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //clear the color buffer and the depth buffer  
+	glLoadIdentity(); // Load the Identity Matrix to reset our drawing locations  
+	camera();
+    enable();
+	glutSwapBuffers(); //swap the buffers
 	CaptureViewPort();
-	exit(1);
-}
+	endSimulation();
+} 
+
 
 int main(int argc, char *argv[]){
 	char* InputFile;
@@ -207,7 +236,16 @@ int main(int argc, char *argv[]){
 	// Simulator.SaveResultFile(Simulator.FitnessFileName);
 	putenv((char *)"DISPLAY=:1");
 
-    glutInit(&argc, argv); // Initialize GLUT
-	endSimulation();
+    //OPEN GL WINDOW
+	glutInit(&argc, argv); // Initialize GLUT  
+	glutInitDisplayMode (GLUT_DOUBLE | GLUT_DEPTH); //set the display to Double buffer, with depth 
+	glutInitWindowSize (800, 800); // Set the width and height of the window  
+	glutInitWindowPosition (100, 100); // Set the position of the window  
+	glutCreateWindow ("Voxelyze"); // Set the title for the window  
+  
+	glutDisplayFunc(display); // Tell GLUT to use the method "display" for rendering  
+	glutIdleFunc(display);
+	glutReshapeFunc (reshape); //reshape the window accordingly
+	glutMainLoop(); // Enter GLUT's main loop
 	return 1;	//code for successful completion
 }
