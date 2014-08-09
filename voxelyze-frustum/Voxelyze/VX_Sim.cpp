@@ -8,6 +8,8 @@ Voxelyze is distributed in the hope that it will be useful, but WITHOUT ANY WARR
 See <http://www.opensource.org/licenses/lgpl-3.0.html> for license details.
 *******************************************************************************/
 
+//#define USE_OPEN_GL
+
 #include "VX_Sim.h"
 #include "VXS_Voxel.h"
 #include "VXS_Bond.h"
@@ -77,7 +79,7 @@ CVX_Sim::CVX_Sim(void)// : out("Logfile.txt", std::ios::ate)
 	ViewForce = false;
 	ViewAngles = false;
 	CurViewMode = RVM_VOXELS;
-	CurViewCol = RVC_TYPE;
+	CurViewCol = RVC_DISP;
 	CurViewVox = RVV_DEFORMED;
 #endif
 

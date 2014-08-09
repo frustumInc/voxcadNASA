@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/OpenGLInclude.h
+GL/glut.h
+-
+
 /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/GL_Utils.h
 Vec3D.h
 /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/Vec3D.h

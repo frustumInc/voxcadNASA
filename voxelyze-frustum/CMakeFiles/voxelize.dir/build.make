@@ -75,40 +75,318 @@ CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o.provides: CMakeFiles/voxelize.dir/Vo
 
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o
 
+CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o: Voxelyze/Utils/GL_Utils.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/GL_Utils.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/GL_Utils.cpp > CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/GL_Utils.cpp -o CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o: Voxelyze/VXS_Voxel.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Voxel.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Voxel.cpp > CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Voxel.cpp -o CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o: Voxelyze/VXS_Bond.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Bond.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Bond.cpp > CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Bond.cpp -o CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o: Voxelyze/VX_Sim.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Sim.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Sim.cpp > CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Sim.cpp -o CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o: Voxelyze/VX_SimGA.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_SimGA.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_SimGA.cpp > CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_SimGA.cpp -o CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o: Voxelyze/VX_Object.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Object.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Object.cpp > CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Object.cpp -o CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o: Voxelyze/VX_MeshUtil.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_MeshUtil.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_MeshUtil.cpp > CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_MeshUtil.cpp -o CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o: Voxelyze/VX_FRegion.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FRegion.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FRegion.cpp > CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FRegion.cpp -o CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o: Voxelyze/VX_FEA.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FEA.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FEA.cpp > CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FEA.cpp -o CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o: Voxelyze/VX_Environment.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Environment.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Environment.cpp > CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Environment.cpp -o CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o: Voxelyze/Utils/Mesh.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/Mesh.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/Mesh.cpp > CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/Mesh.cpp -o CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o: CMakeFiles/voxelize.dir/flags.make
+CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o: Voxelyze/Utils/tinyxml.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o -c /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/tinyxml.cpp
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/tinyxml.cpp > CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.i
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/tinyxml.cpp -o CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.s
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o.requires:
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o.requires
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o.provides: CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o.requires
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o.provides.build
+.PHONY : CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o.provides
+
+CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o.provides.build: CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o
+
 # Object files for target voxelize
 voxelize_OBJECTS = \
-"CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o"
+"CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o" \
+"CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o"
 
 # External object files for target voxelize
 voxelize_EXTERNAL_OBJECTS = \
 "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/XML_Rip.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Voxel.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Bond.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Sim.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_SimGA.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Object.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_MeshUtil.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FRegion.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FEA.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Environment.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/Mesh.o" \
-"/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/tinyxml.o" \
 "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/tinyxmlerror.o" \
 "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/tinyxmlparser.o"
 
 voxelize: CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o
+voxelize: CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o
 voxelize: Voxelyze/Utils/XML_Rip.o
-voxelize: Voxelyze/VXS_Voxel.o
-voxelize: Voxelyze/VXS_Bond.o
-voxelize: Voxelyze/VX_Sim.o
-voxelize: Voxelyze/VX_SimGA.o
-voxelize: Voxelyze/VX_Object.o
-voxelize: Voxelyze/VX_MeshUtil.o
-voxelize: Voxelyze/VX_FRegion.o
-voxelize: Voxelyze/VX_FEA.o
-voxelize: Voxelyze/VX_Environment.o
-voxelize: Voxelyze/Utils/Mesh.o
-voxelize: Voxelyze/Utils/tinyxml.o
 voxelize: Voxelyze/Utils/tinyxmlerror.o
 voxelize: Voxelyze/Utils/tinyxmlparser.o
 voxelize: CMakeFiles/voxelize.dir/build.make
@@ -163,6 +441,18 @@ CMakeFiles/voxelize.dir/build: voxelize
 .PHONY : CMakeFiles/voxelize.dir/build
 
 CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o.requires
+CMakeFiles/voxelize.dir/requires: CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o.requires
 .PHONY : CMakeFiles/voxelize.dir/requires
 
 CMakeFiles/voxelize.dir/clean:

@@ -10,6 +10,7 @@ See <http://www.opensource.org/licenses/lgpl-3.0.html> for license details.
 
 #ifndef VX_SIM_H
 #define VX_SIM_H
+//#define USE_OPEN_GL
 
 #include "VXS_Voxel.h"
 #include "VXS_Bond.h"

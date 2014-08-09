@@ -114,6 +114,294 @@ voxelize/fast:
 	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/build
 .PHONY : voxelize/fast
 
+Voxelyze/Utils/GL_Utils.o: Voxelyze/Utils/GL_Utils.cpp.o
+.PHONY : Voxelyze/Utils/GL_Utils.o
+
+# target to build an object file
+Voxelyze/Utils/GL_Utils.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o
+.PHONY : Voxelyze/Utils/GL_Utils.cpp.o
+
+Voxelyze/Utils/GL_Utils.i: Voxelyze/Utils/GL_Utils.cpp.i
+.PHONY : Voxelyze/Utils/GL_Utils.i
+
+# target to preprocess a source file
+Voxelyze/Utils/GL_Utils.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.i
+.PHONY : Voxelyze/Utils/GL_Utils.cpp.i
+
+Voxelyze/Utils/GL_Utils.s: Voxelyze/Utils/GL_Utils.cpp.s
+.PHONY : Voxelyze/Utils/GL_Utils.s
+
+# target to generate assembly for a file
+Voxelyze/Utils/GL_Utils.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.s
+.PHONY : Voxelyze/Utils/GL_Utils.cpp.s
+
+Voxelyze/Utils/Mesh.o: Voxelyze/Utils/Mesh.cpp.o
+.PHONY : Voxelyze/Utils/Mesh.o
+
+# target to build an object file
+Voxelyze/Utils/Mesh.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o
+.PHONY : Voxelyze/Utils/Mesh.cpp.o
+
+Voxelyze/Utils/Mesh.i: Voxelyze/Utils/Mesh.cpp.i
+.PHONY : Voxelyze/Utils/Mesh.i
+
+# target to preprocess a source file
+Voxelyze/Utils/Mesh.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.i
+.PHONY : Voxelyze/Utils/Mesh.cpp.i
+
+Voxelyze/Utils/Mesh.s: Voxelyze/Utils/Mesh.cpp.s
+.PHONY : Voxelyze/Utils/Mesh.s
+
+# target to generate assembly for a file
+Voxelyze/Utils/Mesh.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.s
+.PHONY : Voxelyze/Utils/Mesh.cpp.s
+
+Voxelyze/Utils/tinyxml.o: Voxelyze/Utils/tinyxml.cpp.o
+.PHONY : Voxelyze/Utils/tinyxml.o
+
+# target to build an object file
+Voxelyze/Utils/tinyxml.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o
+.PHONY : Voxelyze/Utils/tinyxml.cpp.o
+
+Voxelyze/Utils/tinyxml.i: Voxelyze/Utils/tinyxml.cpp.i
+.PHONY : Voxelyze/Utils/tinyxml.i
+
+# target to preprocess a source file
+Voxelyze/Utils/tinyxml.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.i
+.PHONY : Voxelyze/Utils/tinyxml.cpp.i
+
+Voxelyze/Utils/tinyxml.s: Voxelyze/Utils/tinyxml.cpp.s
+.PHONY : Voxelyze/Utils/tinyxml.s
+
+# target to generate assembly for a file
+Voxelyze/Utils/tinyxml.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.s
+.PHONY : Voxelyze/Utils/tinyxml.cpp.s
+
+Voxelyze/VXS_Bond.o: Voxelyze/VXS_Bond.cpp.o
+.PHONY : Voxelyze/VXS_Bond.o
+
+# target to build an object file
+Voxelyze/VXS_Bond.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o
+.PHONY : Voxelyze/VXS_Bond.cpp.o
+
+Voxelyze/VXS_Bond.i: Voxelyze/VXS_Bond.cpp.i
+.PHONY : Voxelyze/VXS_Bond.i
+
+# target to preprocess a source file
+Voxelyze/VXS_Bond.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.i
+.PHONY : Voxelyze/VXS_Bond.cpp.i
+
+Voxelyze/VXS_Bond.s: Voxelyze/VXS_Bond.cpp.s
+.PHONY : Voxelyze/VXS_Bond.s
+
+# target to generate assembly for a file
+Voxelyze/VXS_Bond.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.s
+.PHONY : Voxelyze/VXS_Bond.cpp.s
+
+Voxelyze/VXS_Voxel.o: Voxelyze/VXS_Voxel.cpp.o
+.PHONY : Voxelyze/VXS_Voxel.o
+
+# target to build an object file
+Voxelyze/VXS_Voxel.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o
+.PHONY : Voxelyze/VXS_Voxel.cpp.o
+
+Voxelyze/VXS_Voxel.i: Voxelyze/VXS_Voxel.cpp.i
+.PHONY : Voxelyze/VXS_Voxel.i
+
+# target to preprocess a source file
+Voxelyze/VXS_Voxel.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.i
+.PHONY : Voxelyze/VXS_Voxel.cpp.i
+
+Voxelyze/VXS_Voxel.s: Voxelyze/VXS_Voxel.cpp.s
+.PHONY : Voxelyze/VXS_Voxel.s
+
+# target to generate assembly for a file
+Voxelyze/VXS_Voxel.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.s
+.PHONY : Voxelyze/VXS_Voxel.cpp.s
+
+Voxelyze/VX_Environment.o: Voxelyze/VX_Environment.cpp.o
+.PHONY : Voxelyze/VX_Environment.o
+
+# target to build an object file
+Voxelyze/VX_Environment.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.o
+.PHONY : Voxelyze/VX_Environment.cpp.o
+
+Voxelyze/VX_Environment.i: Voxelyze/VX_Environment.cpp.i
+.PHONY : Voxelyze/VX_Environment.i
+
+# target to preprocess a source file
+Voxelyze/VX_Environment.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.i
+.PHONY : Voxelyze/VX_Environment.cpp.i
+
+Voxelyze/VX_Environment.s: Voxelyze/VX_Environment.cpp.s
+.PHONY : Voxelyze/VX_Environment.s
+
+# target to generate assembly for a file
+Voxelyze/VX_Environment.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Environment.cpp.s
+.PHONY : Voxelyze/VX_Environment.cpp.s
+
+Voxelyze/VX_FEA.o: Voxelyze/VX_FEA.cpp.o
+.PHONY : Voxelyze/VX_FEA.o
+
+# target to build an object file
+Voxelyze/VX_FEA.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.o
+.PHONY : Voxelyze/VX_FEA.cpp.o
+
+Voxelyze/VX_FEA.i: Voxelyze/VX_FEA.cpp.i
+.PHONY : Voxelyze/VX_FEA.i
+
+# target to preprocess a source file
+Voxelyze/VX_FEA.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.i
+.PHONY : Voxelyze/VX_FEA.cpp.i
+
+Voxelyze/VX_FEA.s: Voxelyze/VX_FEA.cpp.s
+.PHONY : Voxelyze/VX_FEA.s
+
+# target to generate assembly for a file
+Voxelyze/VX_FEA.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_FEA.cpp.s
+.PHONY : Voxelyze/VX_FEA.cpp.s
+
+Voxelyze/VX_FRegion.o: Voxelyze/VX_FRegion.cpp.o
+.PHONY : Voxelyze/VX_FRegion.o
+
+# target to build an object file
+Voxelyze/VX_FRegion.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.o
+.PHONY : Voxelyze/VX_FRegion.cpp.o
+
+Voxelyze/VX_FRegion.i: Voxelyze/VX_FRegion.cpp.i
+.PHONY : Voxelyze/VX_FRegion.i
+
+# target to preprocess a source file
+Voxelyze/VX_FRegion.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.i
+.PHONY : Voxelyze/VX_FRegion.cpp.i
+
+Voxelyze/VX_FRegion.s: Voxelyze/VX_FRegion.cpp.s
+.PHONY : Voxelyze/VX_FRegion.s
+
+# target to generate assembly for a file
+Voxelyze/VX_FRegion.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_FRegion.cpp.s
+.PHONY : Voxelyze/VX_FRegion.cpp.s
+
+Voxelyze/VX_MeshUtil.o: Voxelyze/VX_MeshUtil.cpp.o
+.PHONY : Voxelyze/VX_MeshUtil.o
+
+# target to build an object file
+Voxelyze/VX_MeshUtil.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.o
+.PHONY : Voxelyze/VX_MeshUtil.cpp.o
+
+Voxelyze/VX_MeshUtil.i: Voxelyze/VX_MeshUtil.cpp.i
+.PHONY : Voxelyze/VX_MeshUtil.i
+
+# target to preprocess a source file
+Voxelyze/VX_MeshUtil.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.i
+.PHONY : Voxelyze/VX_MeshUtil.cpp.i
+
+Voxelyze/VX_MeshUtil.s: Voxelyze/VX_MeshUtil.cpp.s
+.PHONY : Voxelyze/VX_MeshUtil.s
+
+# target to generate assembly for a file
+Voxelyze/VX_MeshUtil.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_MeshUtil.cpp.s
+.PHONY : Voxelyze/VX_MeshUtil.cpp.s
+
+Voxelyze/VX_Object.o: Voxelyze/VX_Object.cpp.o
+.PHONY : Voxelyze/VX_Object.o
+
+# target to build an object file
+Voxelyze/VX_Object.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.o
+.PHONY : Voxelyze/VX_Object.cpp.o
+
+Voxelyze/VX_Object.i: Voxelyze/VX_Object.cpp.i
+.PHONY : Voxelyze/VX_Object.i
+
+# target to preprocess a source file
+Voxelyze/VX_Object.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.i
+.PHONY : Voxelyze/VX_Object.cpp.i
+
+Voxelyze/VX_Object.s: Voxelyze/VX_Object.cpp.s
+.PHONY : Voxelyze/VX_Object.s
+
+# target to generate assembly for a file
+Voxelyze/VX_Object.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Object.cpp.s
+.PHONY : Voxelyze/VX_Object.cpp.s
+
+Voxelyze/VX_Sim.o: Voxelyze/VX_Sim.cpp.o
+.PHONY : Voxelyze/VX_Sim.o
+
+# target to build an object file
+Voxelyze/VX_Sim.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.o
+.PHONY : Voxelyze/VX_Sim.cpp.o
+
+Voxelyze/VX_Sim.i: Voxelyze/VX_Sim.cpp.i
+.PHONY : Voxelyze/VX_Sim.i
+
+# target to preprocess a source file
+Voxelyze/VX_Sim.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.i
+.PHONY : Voxelyze/VX_Sim.cpp.i
+
+Voxelyze/VX_Sim.s: Voxelyze/VX_Sim.cpp.s
+.PHONY : Voxelyze/VX_Sim.s
+
+# target to generate assembly for a file
+Voxelyze/VX_Sim.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_Sim.cpp.s
+.PHONY : Voxelyze/VX_Sim.cpp.s
+
+Voxelyze/VX_SimGA.o: Voxelyze/VX_SimGA.cpp.o
+.PHONY : Voxelyze/VX_SimGA.o
+
+# target to build an object file
+Voxelyze/VX_SimGA.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o
+.PHONY : Voxelyze/VX_SimGA.cpp.o
+
+Voxelyze/VX_SimGA.i: Voxelyze/VX_SimGA.cpp.i
+.PHONY : Voxelyze/VX_SimGA.i
+
+# target to preprocess a source file
+Voxelyze/VX_SimGA.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.i
+.PHONY : Voxelyze/VX_SimGA.cpp.i
+
+Voxelyze/VX_SimGA.s: Voxelyze/VX_SimGA.cpp.s
+.PHONY : Voxelyze/VX_SimGA.s
+
+# target to generate assembly for a file
+Voxelyze/VX_SimGA.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.s
+.PHONY : Voxelyze/VX_SimGA.cpp.s
+
 Voxelyze/main.o: Voxelyze/main.cpp.o
 .PHONY : Voxelyze/main.o
 
@@ -147,6 +435,42 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... voxelize"
+	@echo "... Voxelyze/Utils/GL_Utils.o"
+	@echo "... Voxelyze/Utils/GL_Utils.i"
+	@echo "... Voxelyze/Utils/GL_Utils.s"
+	@echo "... Voxelyze/Utils/Mesh.o"
+	@echo "... Voxelyze/Utils/Mesh.i"
+	@echo "... Voxelyze/Utils/Mesh.s"
+	@echo "... Voxelyze/Utils/tinyxml.o"
+	@echo "... Voxelyze/Utils/tinyxml.i"
+	@echo "... Voxelyze/Utils/tinyxml.s"
+	@echo "... Voxelyze/VXS_Bond.o"
+	@echo "... Voxelyze/VXS_Bond.i"
+	@echo "... Voxelyze/VXS_Bond.s"
+	@echo "... Voxelyze/VXS_Voxel.o"
+	@echo "... Voxelyze/VXS_Voxel.i"
+	@echo "... Voxelyze/VXS_Voxel.s"
+	@echo "... Voxelyze/VX_Environment.o"
+	@echo "... Voxelyze/VX_Environment.i"
+	@echo "... Voxelyze/VX_Environment.s"
+	@echo "... Voxelyze/VX_FEA.o"
+	@echo "... Voxelyze/VX_FEA.i"
+	@echo "... Voxelyze/VX_FEA.s"
+	@echo "... Voxelyze/VX_FRegion.o"
+	@echo "... Voxelyze/VX_FRegion.i"
+	@echo "... Voxelyze/VX_FRegion.s"
+	@echo "... Voxelyze/VX_MeshUtil.o"
+	@echo "... Voxelyze/VX_MeshUtil.i"
+	@echo "... Voxelyze/VX_MeshUtil.s"
+	@echo "... Voxelyze/VX_Object.o"
+	@echo "... Voxelyze/VX_Object.i"
+	@echo "... Voxelyze/VX_Object.s"
+	@echo "... Voxelyze/VX_Sim.o"
+	@echo "... Voxelyze/VX_Sim.i"
+	@echo "... Voxelyze/VX_Sim.s"
+	@echo "... Voxelyze/VX_SimGA.o"
+	@echo "... Voxelyze/VX_SimGA.i"
+	@echo "... Voxelyze/VX_SimGA.s"
 	@echo "... Voxelyze/main.o"
 	@echo "... Voxelyze/main.i"
 	@echo "... Voxelyze/main.s"

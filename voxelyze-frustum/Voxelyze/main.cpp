@@ -1,3 +1,4 @@
+#define USE_OPEN_GL
 #include <iostream>
 #include "VX_Object.h"
 #include "VX_Environment.h"
@@ -14,7 +15,17 @@ CVX_Sim Simulator;
 
 void camera (void) {
 	double scale = 1.0;
-	gluLookAt ( -472.236*scale, -459.546*scale, 271.046*scale,      127.082*scale, 50.498*scale, 33.481*scale,   0, 0, 1 );
+	gluLookAt (
+			-472.236*scale,
+			-459.546*scale,
+			271.046*scale,
+			0.0*scale,
+			0.0*scale,
+			0.0*scale,
+			0,
+			0,
+			1
+			);
 }
 
 void enable (void) {
@@ -82,12 +93,26 @@ void CaptureViewPort(){
 			capImg->imageData[i*capImg->widthStep + j*3+2] = (unsigned char)(bits[(h-i-1)*3*w + j*3+2]); 
 		} 
 	}
-	cvSaveImage("result.jpg",capImg);
+	cvSaveImage("image.jpg",capImg);
 	cvReleaseImage(&capImg);
 	delete[] bits;
 }
 
-void display (void) {  
+void display (void) {
+
+	//Simulator.DrawView = true;
+	//Simulator.ViewGeo = true; //look at geometry?
+	//Simulator.ViewGeoMesh = true; //if looking at geometry, do we want the mesh?
+
+	//Simulator.CurViewCol = RVC_MATERIAL;
+	//Simulator.CurViewCol = RVC_STRAIN;
+	//Simulator.CurViewCol = RVC_STRAIN;
+	//Simulator.CurViewCol = RVC_DISP;
+	//Simulator.DrawFloor();
+	//Simulator.DrawVoxMesh(1);
+
+	Simulator.VoxMesh.Draw();
+
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Clear the background of our window to red  
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //clear the color buffer and the depth buffer  
 	glLoadIdentity(); // Load the Identity Matrix to reset our drawing locations  
@@ -242,7 +267,7 @@ int main(int argc, char *argv[]){
 	glutInitWindowSize (800, 800); // Set the width and height of the window  
 	glutInitWindowPosition (100, 100); // Set the position of the window  
 	glutCreateWindow ("Voxelyze"); // Set the title for the window  
-  
+
 	glutDisplayFunc(display); // Tell GLUT to use the method "display" for rendering  
 	glutIdleFunc(display);
 	glutReshapeFunc (reshape); //reshape the window accordingly
