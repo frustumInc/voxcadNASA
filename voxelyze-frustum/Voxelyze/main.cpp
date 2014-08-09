@@ -6,123 +6,67 @@
 #include <GL/glut.h>
 #include <cv.h>
 #include <highgui.h>
+using namespace cv;
 
+CVX_Object Object;
+CVX_Environment Environment;
+CVX_Sim Simulator;
 
 void endSimulation(){
-
-	//TODO: put in stress writing feature
-	int count = 0;
-	Vec3D sum = Vec3D(0,0,0);
-	vector<double> voxStress;
-	double stress = 0.0;
-	for(int i=0; i<Simulator.NumVox(); i++){
-		Vec3D vec = Vec3D(0,0,0);
-		
-		vec = Simulator.VoxArray[i].S.Pos;
-		stress = Simulator.VoxArray[i].CurMaxStress;
-		voxStress.push_back(stress);
-		sum = sum + vec;
-		count = count++;
-	}
-	sum = sum/count;
-	cout << "X : "<< sum.x <<"\n";
-	cout << "Y : "<< sum.y <<"\n";
-	cout << "Z : "<< sum.z <<"\n";
-
-	float height = 0;
-	for(int i=0; i<Simulator.NumVox(); i++){
-		Vec3D vec = Vec3D(0,0,0);
-		
-		vec = Simulator.VoxArray[i].S.Pos;
-
-		if( vec.z > height){
-			height = vec.z;
-		}
-
-	}
-	cout << "Z : "<< height <<"\n";
-
-	int profileCount = 0;
-	for(int i=0; i<Simulator.NumVox(); i++){
-		Vec3D vec = Vec3D(0,0,0);
-		
-		vec = Simulator.VoxArray[i].S.Pos;
-
-		if( vec.z > 100*scale && vec.z < 120*scale){
-			profileCount = profileCount+1;
-		}
-
-	}
-	cout << "Z : "<< height <<"\n";
-
-	
 	std::ofstream myfile;
-    myfile.open (dir + ":/WORKFLOW_trabecularOptimization/trabecularOptimization/VoxData.txt");
-    myfile << "Max Strain :" << "\t" << Simulator.MaxBondStrain << "\n";
-	myfile << "Max Stress :" << "\t" << Simulator.MaxBondStress << "\n"; 
-    myfile << "Max Displacement :" << "\t" << Simulator.MaxVoxDisp << "\n";
-	myfile << "Max Displacement X :" << "\t" << Simulator.TotalObjDisp.x  << "\n";
-	myfile << "Max Displacement Y :" << "\t" << Simulator.TotalObjDisp.y  << "\n";
-	myfile << "Max Displacement Z :" << "\t" << Simulator.TotalObjDisp.z  << "\n";
-	myfile << "Avg Displacement :" << "\t" << sum.Length() << "\n";
-	myfile << "Avg Displacement X :" << "\t" << sum.x << "\n";
-	myfile << "Avg Displacement Y :" << "\t" << sum.y << "\n";
-	myfile << "Avg Displacement Z :" << "\t" << sum.z << "\n";
-	myfile << "Max Height :" << "\t" << height << "\n";
-	myfile << "phase2profileCount :" << "\t" << profileCount << "\n";
-	myfile << "Voxel Failures :" << "\t" << Simulator.NumBroken() << "\n"; 
-	myfile << "Voxel Stresses :" << "\n"; 
-
-	for(int i=0; i<voxStress.size(); i++){
-		double s = voxStress[i];
-		myfile << s << ",";
-	}
+    myfile.open ("data.txt");
+    //myfile << "Max Strain :" << "\t" << Simulator.SS.MaxBondStrain << "\n";
+	//myfile << "Max Stress :" << "\t" << Simulator.SS.MaxBondStress << "\n"; 
+    myfile << "Max Displacement :" << "\t" << Simulator.SS.MaxVoxDisp << "\n";
+	//myfile << "Max Displacement X :" << "\t" << Simulator.SS.TotalObjDisp.x  << "\n";
+	//myfile << "Max Displacement Y :" << "\t" << Simulator.SS.TotalObjDisp.y  << "\n";
+	//myfile << "Max Displacement Z :" << "\t" << Simulator.SS.TotalObjDisp.z  << "\n";
 
     myfile.close();
     
-	// Object.SaveVXCFile(dir + ":/WORKFLOW_trabecularOptimization/trabecularOptimization/iteration.vxc");
-	Simulator.SaveVXAFile(dir + ":/WORKFLOW_trabecularOptimization/trabecularOptimization/iteration.vxa");
-	cout << "\n\n";
+	Object.SaveVXCFile("individual.vxc");
+	Simulator.SaveVXAFile("individual.vxa");
+	std::cout << "\n\n";
 	
 	//Simulator.VoxMesh.ToStl(dir + ":/WORKFLOW_trabecularOptimization/trabecularOptimization/mesh.stl", Simulator.pEnv->pObj, true);
 
 	exit(1);
 }
 
-// void CaptureViewPort(){ 
-// 	GLubyte * bits; 
-// 	GLint viewport[4]; 
-// 			         
-// 	glGetIntegerv(GL_VIEWPORT, viewport); 
-// 				     
-// 	int w = viewport[2]; 
-// 	int h = viewport[3]; 
-// 						         
-// 	bits = new GLubyte[w*3*h]; 
-// 							     
-// 	glFinish(); 
-// 	glPixelStorei(GL_PACK_ALIGNMENT,1); 
-// 	glPixelStorei(GL_PACK_ROW_LENGTH, 0); 
-// 	glPixelStorei(GL_PACK_SKIP_ROWS, 0); 
-// 	glPixelStorei(GL_PACK_SKIP_PIXELS, 0); 
-// 	glReadPixels(0, 0, w, h, GL_BGR_EXT, GL_UNSIGNED_BYTE, bits); 
-// 													     
-// 	IplImage * capImg = cvCreateImage( cvSize(w,h), IPL_DEPTH_8U, 3); 
-// 	for(int i=0; i < h; ++i){ 
-// 		for(int j=0; j < w; ++j){ 
-// 			capImg->imageData[i*capImg->widthStep + j*3+0] = (unsigned char)(bits[(h-i-1)*3*w + j*3+0]); 
-// 			capImg->imageData[i*capImg->widthStep + j*3+1] = (unsigned char)(bits[(h-i-1)*3*w + j*3+1]); 
-// 			capImg->imageData[i*capImg->widthStep + j*3+2] = (unsigned char)(bits[(h-i-1)*3*w + j*3+2]); 
-// 		} 
-// 	}
-// 	cvSaveImage("result.jpg",capImg);
-// 	cvReleaseImage(&capImg);
-// 	delete[] bits;
-// }
+void CaptureViewPort(){ 
+	GLubyte * bits; 
+	GLint viewport[4]; 
+			         
+	glGetIntegerv(GL_VIEWPORT, viewport); 
+				     
+	int w = viewport[2]; 
+	int h = viewport[3]; 
+						         
+	bits = new GLubyte[w*3*h]; 
+							     
+	glFinish(); 
+	glPixelStorei(GL_PACK_ALIGNMENT,1); 
+	glPixelStorei(GL_PACK_ROW_LENGTH, 0); 
+	glPixelStorei(GL_PACK_SKIP_ROWS, 0); 
+	glPixelStorei(GL_PACK_SKIP_PIXELS, 0); 
+	glReadPixels(0, 0, w, h, GL_BGR_EXT, GL_UNSIGNED_BYTE, bits); 
+													     
+	IplImage * capImg = cvCreateImage( cvSize(w,h), IPL_DEPTH_8U, 3); 
+	for(int i=0; i < h; ++i){ 
+		for(int j=0; j < w; ++j){ 
+			capImg->imageData[i*capImg->widthStep + j*3+0] = (unsigned char)(bits[(h-i-1)*3*w + j*3+0]); 
+			capImg->imageData[i*capImg->widthStep + j*3+1] = (unsigned char)(bits[(h-i-1)*3*w + j*3+1]); 
+			capImg->imageData[i*capImg->widthStep + j*3+2] = (unsigned char)(bits[(h-i-1)*3*w + j*3+2]); 
+		} 
+	}
+	cvSaveImage("result.jpg",capImg);
+	cvReleaseImage(&capImg);
+	delete[] bits;
+}
 
 void display(){
 
-//	CaptureViewPort();
+	CaptureViewPort();
 	exit(1);
 }
 
@@ -130,9 +74,9 @@ int main(int argc, char *argv[]){
 	char* InputFile;
 	//create the three main objects
 	CVXC_Structure structure;
-	CVX_Object Object;
-	CVX_Environment Environment;
-	CVX_Sim Simulator;
+	// CVX_Object Object;
+	// CVX_Environment Environment;
+	// CVX_Sim Simulator;
 	// CVX_SimGA Simulator;
 	// CVX_SimGA SimulatorGA;
 	long int Step = 0;
@@ -261,9 +205,9 @@ int main(int argc, char *argv[]){
 	// }
 
 	// Simulator.SaveResultFile(Simulator.FitnessFileName);
-	// putenv((char *)"DISPLAY=:1");
+	putenv((char *)"DISPLAY=:1");
 
-	// glutInit(&argc, argv); // Initialize GLUT
-
+    glutInit(&argc, argv); // Initialize GLUT
+	endSimulation();
 	return 1;	//code for successful completion
 }

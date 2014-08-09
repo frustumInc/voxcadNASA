@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( voxelyze )
+find_package( OpenCV REQUIRED )
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+add_executable( voxelyze Voxelyze/main.cpp Voxelyze/Utils/XML_Rip.o Voxelyze/VXS_Voxel.o Voxelyze/VXS_Bond.o Voxelyze/VX_Sim.o Voxelyze/VX_SimGA.o Voxelyze/VX_Object.o Voxelyze/VX_MeshUtil.o Voxelyze/VX_FRegion.o Voxelyze/VX_FEA.o Voxelyze/VX_Environment.o Voxelyze/Utils/Mesh.o Voxelyze/Utils/tinyxml.o Voxelyze/Utils/tinyxmlerror.o Voxelyze/Utils/tinyxmlparser.o)
+target_link_libraries( voxelyze ${OpenCV_LIBS} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY}) 

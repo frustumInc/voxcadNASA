@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <GL/glut.h>
-#include <cv.h>
+#include <cv.hpp>
 #include <highgui.h>
-
 
 void CaptureViewPort(){
 	GLubyte * bits;
@@ -35,6 +34,7 @@ void CaptureViewPort(){
     cvReleaseImage(&capImg);
     delete[] bits;
 }
+
 void draw(void) {
 
     glClearColor(0.0f,0.0f,0.0f,1.0f);
