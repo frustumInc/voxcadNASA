@@ -116,7 +116,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=voxelyze
+CMAKE_PROJECT_NAME:STATIC=voxelize
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -405,6 +405,12 @@ X11_xf86misc_INCLUDE_PATH:PATH=X11_xf86misc_INCLUDE_PATH-NOTFOUND
 
 //Path to a file.
 X11_xf86vmode_INCLUDE_PATH:PATH=/usr/include
+
+//Value Computed by CMake
+voxelize_BINARY_DIR:STATIC=/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum
+
+//Value Computed by CMake
+voxelize_SOURCE_DIR:STATIC=/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum
 
 //Value Computed by CMake
 voxelyze_BINARY_DIR:STATIC=/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum

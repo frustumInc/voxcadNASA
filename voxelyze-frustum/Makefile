@@ -102,24 +102,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named voxelyze
+# Target rules for targets named voxelize
 
 # Build rule for target.
-voxelyze: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 voxelyze
-.PHONY : voxelyze
+voxelize: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 voxelize
+.PHONY : voxelize
 
 # fast build rule for target.
-voxelyze/fast:
-	$(MAKE) -f CMakeFiles/voxelyze.dir/build.make CMakeFiles/voxelyze.dir/build
-.PHONY : voxelyze/fast
+voxelize/fast:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/build
+.PHONY : voxelize/fast
 
 Voxelyze/main.o: Voxelyze/main.cpp.o
 .PHONY : Voxelyze/main.o
 
 # target to build an object file
 Voxelyze/main.cpp.o:
-	$(MAKE) -f CMakeFiles/voxelyze.dir/build.make CMakeFiles/voxelyze.dir/Voxelyze/main.cpp.o
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o
 .PHONY : Voxelyze/main.cpp.o
 
 Voxelyze/main.i: Voxelyze/main.cpp.i
@@ -127,7 +127,7 @@ Voxelyze/main.i: Voxelyze/main.cpp.i
 
 # target to preprocess a source file
 Voxelyze/main.cpp.i:
-	$(MAKE) -f CMakeFiles/voxelyze.dir/build.make CMakeFiles/voxelyze.dir/Voxelyze/main.cpp.i
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/main.cpp.i
 .PHONY : Voxelyze/main.cpp.i
 
 Voxelyze/main.s: Voxelyze/main.cpp.s
@@ -135,7 +135,7 @@ Voxelyze/main.s: Voxelyze/main.cpp.s
 
 # target to generate assembly for a file
 Voxelyze/main.cpp.s:
-	$(MAKE) -f CMakeFiles/voxelyze.dir/build.make CMakeFiles/voxelyze.dir/Voxelyze/main.cpp.s
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/main.cpp.s
 .PHONY : Voxelyze/main.cpp.s
 
 # Help Target
@@ -146,7 +146,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... voxelyze"
+	@echo "... voxelize"
 	@echo "... Voxelyze/main.o"
 	@echo "... Voxelyze/main.i"
 	@echo "... Voxelyze/main.s"

@@ -1,1 +1,1 @@
-/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles/voxelyze.dir
+/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles/voxelize.dir

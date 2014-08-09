@@ -56,38 +56,38 @@ CMAKE_SOURCE_DIR = /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum
 CMAKE_BINARY_DIR = /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum
 
 #=============================================================================
-# Target rules for target CMakeFiles/voxelyze.dir
+# Target rules for target CMakeFiles/voxelize.dir
 
 # All Build rule for target.
-CMakeFiles/voxelyze.dir/all:
-	$(MAKE) -f CMakeFiles/voxelyze.dir/build.make CMakeFiles/voxelyze.dir/depend
-	$(MAKE) -f CMakeFiles/voxelyze.dir/build.make CMakeFiles/voxelyze.dir/build
+CMakeFiles/voxelize.dir/all:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/depend
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles  1
-	@echo "Built target voxelyze"
-.PHONY : CMakeFiles/voxelyze.dir/all
+	@echo "Built target voxelize"
+.PHONY : CMakeFiles/voxelize.dir/all
 
 # Include target in all.
-all: CMakeFiles/voxelyze.dir/all
+all: CMakeFiles/voxelize.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/voxelyze.dir/rule: cmake_check_build_system
+CMakeFiles/voxelize.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/voxelyze.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/voxelize.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles 0
-.PHONY : CMakeFiles/voxelyze.dir/rule
+.PHONY : CMakeFiles/voxelize.dir/rule
 
 # Convenience name for target.
-voxelyze: CMakeFiles/voxelyze.dir/rule
-.PHONY : voxelyze
+voxelize: CMakeFiles/voxelize.dir/rule
+.PHONY : voxelize
 
 # clean rule for target.
-CMakeFiles/voxelyze.dir/clean:
-	$(MAKE) -f CMakeFiles/voxelyze.dir/build.make CMakeFiles/voxelyze.dir/clean
-.PHONY : CMakeFiles/voxelyze.dir/clean
+CMakeFiles/voxelize.dir/clean:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/clean
+.PHONY : CMakeFiles/voxelize.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/voxelyze.dir/clean
+clean: CMakeFiles/voxelize.dir/clean
 .PHONY : clean
 
 #=============================================================================
