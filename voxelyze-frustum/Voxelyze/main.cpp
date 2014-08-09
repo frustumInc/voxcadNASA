@@ -14,7 +14,7 @@ CVX_Environment Environment;
 CVX_Sim Simulator;
 
 void camera (void) {
-	double scale = 1.0;
+	double scale = 0.001;
 	gluLookAt (
 			-472.236*scale,
 			-459.546*scale,
