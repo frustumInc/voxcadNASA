@@ -19,9 +19,9 @@ See <http://www.opensource.org/licenses/lgpl-3.0.html> for license details.
 
 #include <sstream>
 
-#ifdef USE_OPEN_GL
+//#ifdef USE_OPEN_GL
 #include "Utils/GL_Utils.h"
-#endif
+//#endif
 
 
 CVX_Sim::CVX_Sim(void)// : out("Logfile.txt", std::ios::ate)
@@ -74,14 +74,14 @@ CVX_Sim::CVX_Sim(void)// : out("Logfile.txt", std::ios::ate)
 
 	StatToCalc = CALCSTAT_ALL;
 
-#ifdef USE_OPEN_GL
+//#ifdef USE_OPEN_GL
 	NeedStatsUpdate=true;
 	ViewForce = false;
 	ViewAngles = false;
 	CurViewMode = RVM_VOXELS;
 	CurViewCol = RVC_DISP;
 	CurViewVox = RVV_DEFORMED;
-#endif
+//#endif
 
 	ClearAll();
 	OptimalDt = 0; //remove when hack in ClearAll is dealt with
@@ -460,7 +460,7 @@ bool CVX_Sim::Import(CVX_Environment* pEnvIn, CMesh* pSurfMeshIn, std::string* R
 
 
 
-#ifdef USE_OPEN_GL
+//#ifdef USE_OPEN_GL
 	VoxMesh.ImportLinkSim(this);
 	VoxMesh.DefMesh.DrawSmooth = false;
 
@@ -479,7 +479,7 @@ bool CVX_Sim::Import(CVX_Environment* pEnvIn, CMesh* pSurfMeshIn, std::string* R
 	else SurfMesh.ImportSimWithMesh(this, pSurfMeshIn);
 
 
-#endif
+//#endif
 
 
 	ResetSimulation();
@@ -1129,7 +1129,7 @@ bool CVX_Sim::Integrate(IntegrationType Integrator)
 	return true;
 }
 
-#ifdef USE_OPEN_GL
+//#ifdef USE_OPEN_GL
 
 void CVX_Sim::Draw(int Selected, bool ViewSection, int SectionLayer)
 {
@@ -1511,7 +1511,7 @@ char CVX_Sim::StatRqdToDraw() //returns the stats bitfield that we need to calcu
 	}
 }
 
-#endif //OPENGL
+//#endif //OPENGL
 
 void CVX_Sim::CalcL1Bonds(vfloat Dist) //creates contact bonds for all voxels within specified distance
 {

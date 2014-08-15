@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o"
+  "CMakeFiles/voxelize.dir/Voxelyze/Utils/MarchCube.cpp.o"
+  "CMakeFiles/voxelize.dir/Voxelyze/Utils/Array3D.cpp.o"
   "CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o"
   "CMakeFiles/voxelize.dir/Voxelyze/VXS_Voxel.cpp.o"
   "CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o"

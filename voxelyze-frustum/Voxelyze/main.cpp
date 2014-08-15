@@ -14,11 +14,11 @@ CVX_Environment Environment;
 CVX_Sim Simulator;
 
 void camera (void) {
-	double scale = 0.001;
+	double scale = 10.0;
 	gluLookAt (
-			-472.236*scale,
-			-459.546*scale,
-			271.046*scale,
+			0.0*scale,
+			0.0*scale,
+			1.0*scale,
 			0.0*scale,
 			0.0*scale,
 			0.0*scale,
@@ -42,7 +42,7 @@ void reshape (int w, int h) {
     glMatrixMode (GL_PROJECTION); //set the matrix to projection
 
     glLoadIdentity ();
-    gluPerspective (10, (GLfloat)w / (GLfloat)h, .1, 100000); //set the perspective (angle of sight, width, height, nearClip, farClip)
+    gluPerspective (10, (GLfloat)w / (GLfloat)h, .0001, 100000); //set the perspective (angle of sight, width, height, nearClip, farClip)
     glMatrixMode (GL_MODELVIEW); //set the matrix back to model
 }
 
@@ -109,9 +109,9 @@ void display (void) {
 	//Simulator.CurViewCol = RVC_STRAIN;
 	//Simulator.CurViewCol = RVC_DISP;
 	//Simulator.DrawFloor();
-	//Simulator.DrawVoxMesh(1);
-
-	Simulator.VoxMesh.Draw();
+	//Simulator.DrawVoxMesh();
+	//Simulator.defMesh.Draw();
+	Simulator.Draw();
 
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Clear the background of our window to red  
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //clear the color buffer and the depth buffer  
@@ -265,7 +265,7 @@ int main(int argc, char *argv[]){
 	glutInit(&argc, argv); // Initialize GLUT  
 	glutInitDisplayMode (GLUT_DOUBLE | GLUT_DEPTH); //set the display to Double buffer, with depth 
 	glutInitWindowSize (800, 800); // Set the width and height of the window  
-	glutInitWindowPosition (100, 100); // Set the position of the window  
+	//glutInitWindowPosition (100, 100); // Set the position of the window  
 	glutCreateWindow ("Voxelyze"); // Set the title for the window  
 
 	glutDisplayFunc(display); // Tell GLUT to use the method "display" for rendering  

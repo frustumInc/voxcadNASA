@@ -9,6 +9,10 @@
 /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/OpenGLInclude.h
 GL/glut.h
 -
+GL/glu.h
+-
+GL/gl.h
+-
 
 /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/GL_Utils.h
 Vec3D.h

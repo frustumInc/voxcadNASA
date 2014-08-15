@@ -4,7 +4,9 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/Array3D.cpp" "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles/voxelize.dir/Voxelyze/Utils/Array3D.cpp.o"
   "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/GL_Utils.cpp" "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.o"
+  "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/MarchCube.cpp" "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles/voxelize.dir/Voxelyze/Utils/MarchCube.cpp.o"
   "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/Mesh.cpp" "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles/voxelize.dir/Voxelyze/Utils/Mesh.cpp.o"
   "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/tinyxml.cpp" "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles/voxelize.dir/Voxelyze/Utils/tinyxml.cpp.o"
   "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Bond.cpp" "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles/voxelize.dir/Voxelyze/VXS_Bond.cpp.o"
@@ -19,6 +21,11 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/main.cpp" "/home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+SET(CMAKE_TARGET_DEFINITIONS
+  "USE_OPEN_GL=true"
+  )
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES

@@ -36,7 +36,13 @@
         <SurfMesh>
             <CMesh>
                 <DrawSmooth>1</DrawSmooth>
-                <Vertices />
+                <Vertices>
+                    <Vertex>
+                        <Vx>0.0005</Vx>
+                        <Vy>0.0005</Vy>
+                        <Vz>0</Vz>
+                    </Vertex>
+                </Vertices>
                 <Facets />
                 <Lines />
             </CMesh>

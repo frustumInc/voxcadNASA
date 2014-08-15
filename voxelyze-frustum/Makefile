@@ -114,6 +114,30 @@ voxelize/fast:
 	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/build
 .PHONY : voxelize/fast
 
+Voxelyze/Utils/Array3D.o: Voxelyze/Utils/Array3D.cpp.o
+.PHONY : Voxelyze/Utils/Array3D.o
+
+# target to build an object file
+Voxelyze/Utils/Array3D.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/Array3D.cpp.o
+.PHONY : Voxelyze/Utils/Array3D.cpp.o
+
+Voxelyze/Utils/Array3D.i: Voxelyze/Utils/Array3D.cpp.i
+.PHONY : Voxelyze/Utils/Array3D.i
+
+# target to preprocess a source file
+Voxelyze/Utils/Array3D.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/Array3D.cpp.i
+.PHONY : Voxelyze/Utils/Array3D.cpp.i
+
+Voxelyze/Utils/Array3D.s: Voxelyze/Utils/Array3D.cpp.s
+.PHONY : Voxelyze/Utils/Array3D.s
+
+# target to generate assembly for a file
+Voxelyze/Utils/Array3D.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/Array3D.cpp.s
+.PHONY : Voxelyze/Utils/Array3D.cpp.s
+
 Voxelyze/Utils/GL_Utils.o: Voxelyze/Utils/GL_Utils.cpp.o
 .PHONY : Voxelyze/Utils/GL_Utils.o
 
@@ -137,6 +161,30 @@ Voxelyze/Utils/GL_Utils.s: Voxelyze/Utils/GL_Utils.cpp.s
 Voxelyze/Utils/GL_Utils.cpp.s:
 	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/GL_Utils.cpp.s
 .PHONY : Voxelyze/Utils/GL_Utils.cpp.s
+
+Voxelyze/Utils/MarchCube.o: Voxelyze/Utils/MarchCube.cpp.o
+.PHONY : Voxelyze/Utils/MarchCube.o
+
+# target to build an object file
+Voxelyze/Utils/MarchCube.cpp.o:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/MarchCube.cpp.o
+.PHONY : Voxelyze/Utils/MarchCube.cpp.o
+
+Voxelyze/Utils/MarchCube.i: Voxelyze/Utils/MarchCube.cpp.i
+.PHONY : Voxelyze/Utils/MarchCube.i
+
+# target to preprocess a source file
+Voxelyze/Utils/MarchCube.cpp.i:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/MarchCube.cpp.i
+.PHONY : Voxelyze/Utils/MarchCube.cpp.i
+
+Voxelyze/Utils/MarchCube.s: Voxelyze/Utils/MarchCube.cpp.s
+.PHONY : Voxelyze/Utils/MarchCube.s
+
+# target to generate assembly for a file
+Voxelyze/Utils/MarchCube.cpp.s:
+	$(MAKE) -f CMakeFiles/voxelize.dir/build.make CMakeFiles/voxelize.dir/Voxelyze/Utils/MarchCube.cpp.s
+.PHONY : Voxelyze/Utils/MarchCube.cpp.s
 
 Voxelyze/Utils/Mesh.o: Voxelyze/Utils/Mesh.cpp.o
 .PHONY : Voxelyze/Utils/Mesh.o
@@ -435,9 +483,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... voxelize"
+	@echo "... Voxelyze/Utils/Array3D.o"
+	@echo "... Voxelyze/Utils/Array3D.i"
+	@echo "... Voxelyze/Utils/Array3D.s"
 	@echo "... Voxelyze/Utils/GL_Utils.o"
 	@echo "... Voxelyze/Utils/GL_Utils.i"
 	@echo "... Voxelyze/Utils/GL_Utils.s"
+	@echo "... Voxelyze/Utils/MarchCube.o"
+	@echo "... Voxelyze/Utils/MarchCube.i"
+	@echo "... Voxelyze/Utils/MarchCube.s"
 	@echo "... Voxelyze/Utils/Mesh.o"
 	@echo "... Voxelyze/Utils/Mesh.i"
 	@echo "... Voxelyze/Utils/Mesh.s"
