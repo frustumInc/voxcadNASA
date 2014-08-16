@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <VXC Version="0.94">
     <Lattice>
-        <Lattice_Dim>0.001</Lattice_Dim>
+        <Lattice_Dim>0.0005</Lattice_Dim>
         <X_Dim_Adj>1</X_Dim_Adj>
         <Y_Dim_Adj>1</Y_Dim_Adj>
         <Z_Dim_Adj>1</Z_Dim_Adj>
@@ -19,99 +19,24 @@
     <Palette>
         <Material ID="1">
             <MatType>0</MatType>
-            <Name>Passive_Soft</Name>
+            <Name>titanium</Name>
             <Display>
-                <Red>0</Red>
-                <Green>0.57</Green>
-                <Blue>0.44</Blue>
+                <Red>0.498039</Red>
+                <Green>0.498039</Green>
+                <Blue>0.498039</Blue>
                 <Alpha>1</Alpha>
             </Display>
             <Mechanical>
                 <MatModel>0</MatModel>
-                <Elastic_Mod>1e+07</Elastic_Mod>
+                <Elastic_Mod>1.138e+11</Elastic_Mod>
                 <Plastic_Mod>0</Plastic_Mod>
                 <Yield_Stress>0</Yield_Stress>
                 <FailModel>0</FailModel>
                 <Fail_Stress>0</Fail_Stress>
                 <Fail_Strain>0</Fail_Strain>
-                <Density>1e+06</Density>
-                <Poissons_Ratio>0.35</Poissons_Ratio>
+                <Density>4430</Density>
+                <Poissons_Ratio>0.342</Poissons_Ratio>
                 <CTE>0</CTE>
-                <MaterialTempPhase>0</MaterialTempPhase>
-                <uStatic>1</uStatic>
-                <uDynamic>0.5</uDynamic>
-            </Mechanical>
-        </Material>
-        <Material ID="2">
-            <MatType>0</MatType>
-            <Name>Passive_Hard</Name>
-            <Display>
-                <Red>0</Red>
-                <Green>0.082</Green>
-                <Blue>0.819</Blue>
-                <Alpha>1</Alpha>
-            </Display>
-            <Mechanical>
-                <MatModel>0</MatModel>
-                <Elastic_Mod>5e+07</Elastic_Mod>
-                <Plastic_Mod>0</Plastic_Mod>
-                <Yield_Stress>0</Yield_Stress>
-                <FailModel>0</FailModel>
-                <Fail_Stress>0</Fail_Stress>
-                <Fail_Strain>0</Fail_Strain>
-                <Density>1e+06</Density>
-                <Poissons_Ratio>0.35</Poissons_Ratio>
-                <CTE>0</CTE>
-                <MaterialTempPhase>0</MaterialTempPhase>
-                <uStatic>1</uStatic>
-                <uDynamic>0.5</uDynamic>
-            </Mechanical>
-        </Material>
-        <Material ID="3">
-            <MatType>0</MatType>
-            <Name>Active_+</Name>
-            <Display>
-                <Red>1</Red>
-                <Green>0</Green>
-                <Blue>0</Blue>
-                <Alpha>1</Alpha>
-            </Display>
-            <Mechanical>
-                <MatModel>0</MatModel>
-                <Elastic_Mod>1e+07</Elastic_Mod>
-                <Plastic_Mod>0</Plastic_Mod>
-                <Yield_Stress>0</Yield_Stress>
-                <FailModel>0</FailModel>
-                <Fail_Stress>0</Fail_Stress>
-                <Fail_Strain>0</Fail_Strain>
-                <Density>1e+06</Density>
-                <Poissons_Ratio>0.35</Poissons_Ratio>
-                <CTE>0.01</CTE>
-                <MaterialTempPhase>0</MaterialTempPhase>
-                <uStatic>1</uStatic>
-                <uDynamic>0.5</uDynamic>
-            </Mechanical>
-        </Material>
-        <Material ID="4">
-            <MatType>0</MatType>
-            <Name>Active_-</Name>
-            <Display>
-                <Red>0</Red>
-                <Green>1</Green>
-                <Blue>0</Blue>
-                <Alpha>1</Alpha>
-            </Display>
-            <Mechanical>
-                <MatModel>0</MatModel>
-                <Elastic_Mod>1e+07</Elastic_Mod>
-                <Plastic_Mod>0</Plastic_Mod>
-                <Yield_Stress>0</Yield_Stress>
-                <FailModel>0</FailModel>
-                <Fail_Stress>0</Fail_Stress>
-                <Fail_Strain>0</Fail_Strain>
-                <Density>1e+06</Density>
-                <Poissons_Ratio>0.35</Poissons_Ratio>
-                <CTE>-0.01</CTE>
                 <MaterialTempPhase>0</MaterialTempPhase>
                 <uStatic>1</uStatic>
                 <uDynamic>0.5</uDynamic>
@@ -119,9 +44,9 @@
         </Material>
     </Palette>
     <Structure Compression="ZLIB">
-        <X_Voxels>10</X_Voxels>
-        <Y_Voxels>10</Y_Voxels>
-        <Z_Voxels>10</Z_Voxels>
+        <X_Voxels>152</X_Voxels>
+        <Y_Voxels>34</Y_Voxels>
+        <Z_Voxels>40</Z_Voxels>
         <Data />
     </Structure>
 </VXC>

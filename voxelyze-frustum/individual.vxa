@@ -7,11 +7,11 @@
         </Integration>
         <Damping>
             <BondDampingZ>1</BondDampingZ>
-            <ColDampingZ>0.8</ColDampingZ>
-            <SlowDampingZ>1.7378e-05</SlowDampingZ>
+            <ColDampingZ>1</ColDampingZ>
+            <SlowDampingZ>0.001</SlowDampingZ>
         </Damping>
         <Collisions>
-            <SelfColEnabled>1</SelfColEnabled>
+            <SelfColEnabled>0</SelfColEnabled>
             <ColSystem>3</ColSystem>
             <CollisionHorizon>2</CollisionHorizon>
         </Collisions>
@@ -27,8 +27,8 @@
             <EnforceLatticeEnabled>0</EnforceLatticeEnabled>
         </Features>
         <StopCondition>
-            <StopConditionType>2</StopConditionType>
-            <StopConditionValue>1</StopConditionValue>
+            <StopConditionType>0</StopConditionType>
+            <StopConditionValue>0</StopConditionValue>
         </StopCondition>
         <EquilibriumMode>
             <EquilibriumModeEnabled>0</EquilibriumModeEnabled>
@@ -38,8 +38,8 @@
                 <DrawSmooth>1</DrawSmooth>
                 <Vertices>
                     <Vertex>
-                        <Vx>0.0005</Vx>
-                        <Vy>0.0005</Vy>
+                        <Vx>0.00025</Vx>
+                        <Vy>0.00025</Vy>
                         <Vz>0</Vz>
                     </Vertex>
                 </Vertices>
@@ -50,26 +50,107 @@
     </Simulator>
     <Environment>
         <Boundary_Conditions>
-            <NumBCs>0</NumBCs>
+            <NumBCs>3</NumBCs>
+            <FRegion>
+                <PrimType>0</PrimType>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <dX>0.01</dX>
+                <dY>1</dY>
+                <dZ>1</dZ>
+                <Radius>0</Radius>
+                <R>0.4</R>
+                <G>0.6</G>
+                <B>0.4</B>
+                <alpha>1</alpha>
+                <DofFixed>63</DofFixed>
+                <ForceX>0</ForceX>
+                <ForceY>0</ForceY>
+                <ForceZ>0</ForceZ>
+                <TorqueX>0</TorqueX>
+                <TorqueY>0</TorqueY>
+                <TorqueZ>0</TorqueZ>
+                <DisplaceX>0</DisplaceX>
+                <DisplaceY>0</DisplaceY>
+                <DisplaceZ>0</DisplaceZ>
+                <AngDisplaceX>0</AngDisplaceX>
+                <AngDisplaceY>0</AngDisplaceY>
+                <AngDisplaceZ>0</AngDisplaceZ>
+            </FRegion>
+            <FRegion>
+                <PrimType>0</PrimType>
+                <X>0.99</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <dX>0.01</dX>
+                <dY>1</dY>
+                <dZ>1</dZ>
+                <Radius>0</Radius>
+                <R>0.4</R>
+                <G>0.6</G>
+                <B>0.4</B>
+                <alpha>1</alpha>
+                <DofFixed>63</DofFixed>
+                <ForceX>0</ForceX>
+                <ForceY>0</ForceY>
+                <ForceZ>0</ForceZ>
+                <TorqueX>0</TorqueX>
+                <TorqueY>0</TorqueY>
+                <TorqueZ>0</TorqueZ>
+                <DisplaceX>0</DisplaceX>
+                <DisplaceY>0</DisplaceY>
+                <DisplaceZ>0</DisplaceZ>
+                <AngDisplaceX>0</AngDisplaceX>
+                <AngDisplaceY>0</AngDisplaceY>
+                <AngDisplaceZ>0</AngDisplaceZ>
+            </FRegion>
+            <FRegion>
+                <PrimType>0</PrimType>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0.95</Z>
+                <dX>1</dX>
+                <dY>1</dY>
+                <dZ>0.05</dZ>
+                <Radius>0</Radius>
+                <R>0.6</R>
+                <G>0.4</G>
+                <B>0.6</B>
+                <alpha>1</alpha>
+                <DofFixed>0</DofFixed>
+                <ForceX>0</ForceX>
+                <ForceY>0</ForceY>
+                <ForceZ>-10</ForceZ>
+                <TorqueX>0</TorqueX>
+                <TorqueY>0</TorqueY>
+                <TorqueZ>0</TorqueZ>
+                <DisplaceX>0</DisplaceX>
+                <DisplaceY>0</DisplaceY>
+                <DisplaceZ>0</DisplaceZ>
+                <AngDisplaceX>0</AngDisplaceX>
+                <AngDisplaceY>0</AngDisplaceY>
+                <AngDisplaceZ>0</AngDisplaceZ>
+            </FRegion>
         </Boundary_Conditions>
         <Gravity>
-            <GravEnabled>1</GravEnabled>
+            <GravEnabled>0</GravEnabled>
             <GravAcc>-9.81</GravAcc>
-            <FloorEnabled>1</FloorEnabled>
+            <FloorEnabled>0</FloorEnabled>
         </Gravity>
         <Thermal>
-            <TempEnabled>1</TempEnabled>
-            <TempAmplitude>14</TempAmplitude>
+            <TempEnabled>0</TempEnabled>
+            <TempAmplitude>0</TempAmplitude>
             <TempBase>25</TempBase>
-            <VaryTempEnabled>1</VaryTempEnabled>
-            <TempPeriod>0.025</TempPeriod>
+            <VaryTempEnabled>0</VaryTempEnabled>
+            <TempPeriod>0.1</TempPeriod>
             <ElectricityUpdatePeriod>0.1</ElectricityUpdatePeriod>
             <NeuralUpdatePeriod>0.01</NeuralUpdatePeriod>
         </Thermal>
     </Environment>
     <VXC Version="0.94">
         <Lattice>
-            <Lattice_Dim>0.001</Lattice_Dim>
+            <Lattice_Dim>0.0005</Lattice_Dim>
             <X_Dim_Adj>1</X_Dim_Adj>
             <Y_Dim_Adj>1</Y_Dim_Adj>
             <Z_Dim_Adj>1</Z_Dim_Adj>
@@ -87,99 +168,24 @@
         <Palette>
             <Material ID="1">
                 <MatType>0</MatType>
-                <Name>Passive_Soft</Name>
+                <Name>titanium</Name>
                 <Display>
-                    <Red>0</Red>
-                    <Green>0.57</Green>
-                    <Blue>0.44</Blue>
+                    <Red>0.498039</Red>
+                    <Green>0.498039</Green>
+                    <Blue>0.498039</Blue>
                     <Alpha>1</Alpha>
                 </Display>
                 <Mechanical>
                     <MatModel>0</MatModel>
-                    <Elastic_Mod>1e+07</Elastic_Mod>
+                    <Elastic_Mod>1.138e+11</Elastic_Mod>
                     <Plastic_Mod>0</Plastic_Mod>
                     <Yield_Stress>0</Yield_Stress>
                     <FailModel>0</FailModel>
                     <Fail_Stress>0</Fail_Stress>
                     <Fail_Strain>0</Fail_Strain>
-                    <Density>1e+06</Density>
-                    <Poissons_Ratio>0.35</Poissons_Ratio>
+                    <Density>4430</Density>
+                    <Poissons_Ratio>0.342</Poissons_Ratio>
                     <CTE>0</CTE>
-                    <MaterialTempPhase>0</MaterialTempPhase>
-                    <uStatic>1</uStatic>
-                    <uDynamic>0.5</uDynamic>
-                </Mechanical>
-            </Material>
-            <Material ID="2">
-                <MatType>0</MatType>
-                <Name>Passive_Hard</Name>
-                <Display>
-                    <Red>0</Red>
-                    <Green>0.082</Green>
-                    <Blue>0.819</Blue>
-                    <Alpha>1</Alpha>
-                </Display>
-                <Mechanical>
-                    <MatModel>0</MatModel>
-                    <Elastic_Mod>5e+07</Elastic_Mod>
-                    <Plastic_Mod>0</Plastic_Mod>
-                    <Yield_Stress>0</Yield_Stress>
-                    <FailModel>0</FailModel>
-                    <Fail_Stress>0</Fail_Stress>
-                    <Fail_Strain>0</Fail_Strain>
-                    <Density>1e+06</Density>
-                    <Poissons_Ratio>0.35</Poissons_Ratio>
-                    <CTE>0</CTE>
-                    <MaterialTempPhase>0</MaterialTempPhase>
-                    <uStatic>1</uStatic>
-                    <uDynamic>0.5</uDynamic>
-                </Mechanical>
-            </Material>
-            <Material ID="3">
-                <MatType>0</MatType>
-                <Name>Active_+</Name>
-                <Display>
-                    <Red>1</Red>
-                    <Green>0</Green>
-                    <Blue>0</Blue>
-                    <Alpha>1</Alpha>
-                </Display>
-                <Mechanical>
-                    <MatModel>0</MatModel>
-                    <Elastic_Mod>1e+07</Elastic_Mod>
-                    <Plastic_Mod>0</Plastic_Mod>
-                    <Yield_Stress>0</Yield_Stress>
-                    <FailModel>0</FailModel>
-                    <Fail_Stress>0</Fail_Stress>
-                    <Fail_Strain>0</Fail_Strain>
-                    <Density>1e+06</Density>
-                    <Poissons_Ratio>0.35</Poissons_Ratio>
-                    <CTE>0.01</CTE>
-                    <MaterialTempPhase>0</MaterialTempPhase>
-                    <uStatic>1</uStatic>
-                    <uDynamic>0.5</uDynamic>
-                </Mechanical>
-            </Material>
-            <Material ID="4">
-                <MatType>0</MatType>
-                <Name>Active_-</Name>
-                <Display>
-                    <Red>0</Red>
-                    <Green>1</Green>
-                    <Blue>0</Blue>
-                    <Alpha>1</Alpha>
-                </Display>
-                <Mechanical>
-                    <MatModel>0</MatModel>
-                    <Elastic_Mod>1e+07</Elastic_Mod>
-                    <Plastic_Mod>0</Plastic_Mod>
-                    <Yield_Stress>0</Yield_Stress>
-                    <FailModel>0</FailModel>
-                    <Fail_Stress>0</Fail_Stress>
-                    <Fail_Strain>0</Fail_Strain>
-                    <Density>1e+06</Density>
-                    <Poissons_Ratio>0.35</Poissons_Ratio>
-                    <CTE>-0.01</CTE>
                     <MaterialTempPhase>0</MaterialTempPhase>
                     <uStatic>1</uStatic>
                     <uDynamic>0.5</uDynamic>
@@ -187,9 +193,9 @@
             </Material>
         </Palette>
         <Structure Compression="ZLIB">
-            <X_Voxels>10</X_Voxels>
-            <Y_Voxels>10</Y_Voxels>
-            <Z_Voxels>10</Z_Voxels>
+            <X_Voxels>152</X_Voxels>
+            <Y_Voxels>34</Y_Voxels>
+            <Z_Voxels>40</Z_Voxels>
             <Data />
         </Structure>
     </VXC>

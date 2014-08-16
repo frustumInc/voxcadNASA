@@ -1,1 +1,1 @@
-Max Displacement :	0.00717613
+Max Displacement :	9.52106e-07
