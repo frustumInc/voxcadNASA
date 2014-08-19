@@ -33,7 +33,8 @@ void endSimulation(){
     myfile.open ("data.txt");
     //myfile << "Max Strain :" << "\t" << Simulator.SS.MaxBondStrain << "\n";
 	//myfile << "Max Stress :" << "\t" << Simulator.SS.MaxBondStress << "\n"; 
-    myfile << "Max Displacement :" << "\t" << Simulator.SS.MaxVoxDisp << "\n";
+    myfile << "Max Displacement:" << Simulator.SS.MaxVoxDisp << "\n";	
+    myfile << "Total Weight:" << Simulator.pEnv->pObj->GetWeight() << "\n";
 	//myfile << "Max Displacement X :" << "\t" << Simulator.SS.TotalObjDisp.x  << "\n";
 	//myfile << "Max Displacement Y :" << "\t" << Simulator.SS.TotalObjDisp.y  << "\n";
 	//myfile << "Max Displacement Z :" << "\t" << Simulator.SS.TotalObjDisp.z  << "\n";
@@ -182,20 +183,34 @@ int main(int argc, char *argv[]){
 
 	Simulator.Import(&Environment, 0, &ReturnMessage);
 	if (/*Simulator.*/print_scrn) std::cout << "Simulation import return message:\n" << ReturnMessage << "\n";
-	// while (not Simulator.StopConditionMet()){
-	for(int i=0; i<5000; i++){
+	
+	bool converged = false;
+	double history = 10000000000.0;
+	while (not converged){
+	//for(int i=0; i<5000; i++){
 		if (Step%1000 == 0.0 && /*Simulator.*/print_scrn) //Only output every n time steps
 		// if (fmod(Time,0.001) < 0.00000001  && /*Simulator.*/print_scrn) //Only output every n time steps
 		// if (print_scrn)
 		{
-			std::cout << "Time: " << Time << std::endl;
+			std::cout << "Displacement : " << Simulator.SS.MaxVoxDisp << std::endl;
 		}
+		
+		if (Step == 5000){
+			converged = true;
+		}
+		
+		// if (Simulator.SS.MaxVoxDisp == history){
+		// 	converged = true;
+		// }
+		// if (Simulator.SS.MaxVoxDisp != history){
+		// 	history = Simulator.SS.MaxVoxDisp;
+		// }
 
 		//do the actual simulation step
 		Simulator.TimeStep(&ReturnMessage);
 		Step += 1;	//increment the step counter
 		Time += Simulator.dt;	//update the sim tim after the step
-		i = i+1;
+		//i = i+1;
 	}
 
 	if (print_scrn) std::cout<<"Ending at: "<<Time<<std::endl;

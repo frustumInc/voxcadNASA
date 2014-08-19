@@ -1,1 +1,2 @@
-Max Displacement :	9.52106e-07
+Max Displacement:8.12239e-07
+Total Weight:0.022464
