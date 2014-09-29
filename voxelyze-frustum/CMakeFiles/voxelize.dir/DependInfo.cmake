@@ -25,6 +25,7 @@ SET(CMAKE_CXX_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 SET(CMAKE_TARGET_DEFINITIONS
   "USE_OPEN_GL=true"
+  "USE_PARDISO=true"
   )
 
 # Targets to which this target links.

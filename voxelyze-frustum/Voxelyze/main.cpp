@@ -1,17 +1,23 @@
 #define USE_OPEN_GL
 #include <iostream>
+#include <fstream>
 #include "VX_Object.h"
 #include "VX_Environment.h"
-#include "VX_Sim.h"
+//#include "VX_Sim.h"
 #include <stdlib.h>
 #include <GL/glut.h>
 #include <cv.h>
 #include <highgui.h>
+#include "VX_FEA.h"
+#include "Utils/Vec3D.h"
+#include <exception>
+
 using namespace cv;
 
 CVX_Object Object;
 CVX_Environment Environment;
-CVX_Sim Simulator;
+//CVX_Sim Simulator;
+CVX_FEA Simulator;
 
 void camera (void) {
 	double scale = 1.0;
@@ -30,22 +36,24 @@ void camera (void) {
 
 void endSimulation(){
 	std::ofstream myfile;
-    myfile.open ("data.txt");
+    myfile.open("data.txt");
     //myfile << "Max Strain :" << "\t" << Simulator.SS.MaxBondStrain << "\n";
 	//myfile << "Max Stress :" << "\t" << Simulator.SS.MaxBondStress << "\n"; 
-    myfile << "Max Displacement:" << Simulator.SS.MaxVoxDisp << "\n";	
+    
+	myfile << "Max Displacement:" << Simulator.GetMaxDisp()*1000 << "\n";	
     myfile << "Total Weight:" << Simulator.pEnv->pObj->GetWeight() << "\n";
+	
 	//myfile << "Max Displacement X :" << "\t" << Simulator.SS.TotalObjDisp.x  << "\n";
 	//myfile << "Max Displacement Y :" << "\t" << Simulator.SS.TotalObjDisp.y  << "\n";
 	//myfile << "Max Displacement Z :" << "\t" << Simulator.SS.TotalObjDisp.z  << "\n";
 
     myfile.close();
     
-	Object.SaveVXCFile("individual.vxc");
-	Simulator.SaveVXAFile("individual.vxa");
+	//Object.SaveVXCFile("individual.vxc");
+	//Simulator.SaveVXAFile("individual.vxa");
 	std::cout << "\n\n";
 	
-	//Simulator.VoxMesh.ToStl(dir + ":/WORKFLOW_trabecularOptimization/trabecularOptimization/mesh.stl", Simulator.pEnv->pObj, true);
+	//Environment.VoxMesh.ToStl("individual.stl", Simulator.pEnv->pObj, true);
 
 	exit(1);
 }
@@ -113,7 +121,7 @@ void display (void) {
 	//Simulator.DrawFloor();
 	//Simulator.DrawVoxMesh();
 	//Simulator.defMesh.Draw();
-	Simulator.Draw();
+	Simulator.DrawFEA();
 	
 
 	//glLineWidth(2.5); 
@@ -147,6 +155,9 @@ int main(int argc, char *argv[]){
 	Vec3D<> Vox0Pos;	//for reporting the position of the first voxel
 	bool print_scrn = false;
 
+	
+	putenv((char *)"DISPLAY=:1");
+	
 	//first, parse inputs. Use as: -f followed by the filename of the .vxa file that describes the simulation. Can also follow this with -p to cause console output to occur
 	if (argc < 2) 
 	{ // Check the value of argc. If not enough parameters have been passed, inform user and exit.
@@ -174,30 +185,30 @@ int main(int argc, char *argv[]){
 	Environment.pObj = &Object;		//connect environment to object
 
 	//import the configuration file
-	if (!Simulator.LoadVXAFile(InputFile)){
-		if (/*Simulator.*/print_scrn) std::cout << "\nProblem importing VXA file. Quitting\n";
-		return(0);	//return, indicating via code (0) that we did not complete the simulation
-		}
-	std::string ReturnMessage;
-	if (/*Simulator.*/print_scrn) std::cout << "\nImporting Environment into simulator...\n";
-
-	Simulator.Import(&Environment, 0, &ReturnMessage);
-	if (/*Simulator.*/print_scrn) std::cout << "Simulation import return message:\n" << ReturnMessage << "\n";
+//	if (!Simulator.LoadVXAFile(InputFile)){
+//		if (/*Simulator.*/print_scrn) std::cout << "\nProblem importing VXA file. Quitting\n";
+//		return(0);	//return, indicating via code (0) that we did not complete the simulation
+//		}
+//	std::string ReturnMessage;
+//	if (/*Simulator.*/print_scrn) std::cout << "\nImporting Environment into simulator...\n";
+//
+//	Simulator.Import(&Environment, 0, &ReturnMessage);
+//	if (/*Simulator.*/print_scrn) std::cout << "Simulation import return message:\n" << ReturnMessage << "\n";
 	
-	bool converged = false;
-	double history = 10000000000.0;
-	while (not converged){
+	//bool converged = false;
+	//double history = 10000000000.0;
+	//while (not converged){
 	//for(int i=0; i<5000; i++){
-		if (Step%1000 == 0.0 && /*Simulator.*/print_scrn) //Only output every n time steps
+		//if (Step%1000 == 0.0 && /*Simulator.*/print_scrn) //Only output every n time steps
 		// if (fmod(Time,0.001) < 0.00000001  && /*Simulator.*/print_scrn) //Only output every n time steps
 		// if (print_scrn)
-		{
-			std::cout << "Displacement : " << Simulator.SS.MaxVoxDisp << std::endl;
-		}
+		//{
+		//	std::cout << "Displacement : " << Simulator.SS.MaxVoxDisp << std::endl;
+		//}
 		
-		if (Step == 5000){
-			converged = true;
-		}
+		//if (Step == 5000){
+		//	converged = true;
+		//}
 		
 		// if (Simulator.SS.MaxVoxDisp == history){
 		// 	converged = true;
@@ -207,23 +218,41 @@ int main(int argc, char *argv[]){
 		// }
 
 		//do the actual simulation step
-		Simulator.TimeStep(&ReturnMessage);
-		Step += 1;	//increment the step counter
-		Time += Simulator.dt;	//update the sim tim after the step
+		//Simulator.TimeStep(&ReturnMessage);
+		//Step += 1;	//increment the step counter
+		//Time += Simulator.dt;	//update the sim tim after the step
 		//i = i+1;
-	}
+	//}
+	//Environment.SaveBCXFile("case_study_3.bcx");	
+	//Object.InitializeMatter(0.001f, 10, 20, 10);
 
-	if (print_scrn) std::cout<<"Ending at: "<<Time<<std::endl;
-	putenv((char *)"DISPLAY=:1");
+	Object.LoadVXCFile(InputFile);	
+	Environment.AddObject(&Object);
+
+	//Environment.AddFixedBc(Vec3D<>(0, 0, 0), Vec3D<>(1.0f, 0.01f, 1.0f));
+	//Environment.AddForcedBc(Vec3D<>(0, 0.99, 0), Vec3D<>(1.0f, 0.01f, 1.0f), Vec3D<>(0, 0, -1.0f));
+	//Simulator.ImportObj(&Environment);
+
+
+	if (!Environment.LoadBCXFile("case_study_3.bcx")){
+		if (/*Environment.*/print_scrn) std::cout << "\nProblem importing BCX file. Quitting\n";
+		return(0);	//return, indicating via code (0) that we did not complete the simulation
+		}
+	std::string ReturnMessage;
+	if (/*Environment.*/print_scrn) std::cout << "\nImporting Bounderies into Environment...\n";
+
+	Simulator.ImportObj(&Environment, &ReturnMessage);
+	if (/*Simulator.*/print_scrn) std::cout << "Simulation import return message:\n" << ReturnMessage << "\n";
+	
+	Simulator.Solve(&ReturnMessage);
+	if (/*Simulator.*/print_scrn) std::cout << "Solve return message:\n" << ReturnMessage << "\n";
 
 	//OPEN GL WINDOW
 	glutInit(&argc, argv); // Initialize GLUT  
 	glutInitDisplayMode (GLUT_DOUBLE | GLUT_DEPTH); //set the display to Double buffer, with depth 
 	glutInitWindowSize (800, 800); // Set the width and height of the window  
 	glutCreateWindow ("Voxelyze"); // Set the title for the window  
-	
-	
-	
+		
 	glutDisplayFunc(display); // Tell GLUT to use the method "display" for rendering  
 	//glutIdleFunc(display);
 	

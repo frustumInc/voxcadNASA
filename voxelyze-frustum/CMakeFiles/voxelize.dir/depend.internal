@@ -151,19 +151,15 @@ CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_SimGA.cpp
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_SimGA.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o
- /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/OpenGLInclude.h
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/GL_Utils.h
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/Mesh.h
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/Vec3D.h
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/XML_Rip.h
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/Utils/tinyxml.h
- /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Bond.h
- /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VXS_Voxel.h
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Environment.h
+ /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FEA.h
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_FRegion.h
- /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_MeshUtil.h
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Object.h
- /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/VX_Sim.h
  /home/ubuntu/kernel/simulation/voxelyze/voxelyze-frustum/Voxelyze/main.cpp
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/highgui.h

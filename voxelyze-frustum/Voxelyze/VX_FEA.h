@@ -131,6 +131,10 @@ private: //off limits variable and functions (internal)
 	void ConsolidateA(); //gets rid of all the zeros for solving!
 	void CalcForces();
 
+	int DOFInd;
+	//typedef tbb::mutex progressMutex;
+	//static progressMutex pm;
+	int update_DOFInd();
 	void ApplyFixed(); //builds FixedList
 	void ApplyForces();
 

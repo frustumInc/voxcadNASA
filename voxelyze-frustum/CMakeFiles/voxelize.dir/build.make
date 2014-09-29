@@ -468,6 +468,7 @@ voxelize: /usr/lib/x86_64-linux-gnu/libXext.so
 voxelize: /usr/lib/x86_64-linux-gnu/libglut.so
 voxelize: /usr/lib/x86_64-linux-gnu/libXmu.so
 voxelize: /usr/lib/x86_64-linux-gnu/libXi.so
+voxelize: /usr/local/lib/libblas.a
 voxelize: /usr/local/lib/libopencv_nonfree.so.2.4.9
 voxelize: /usr/local/lib/libopencv_ocl.so.2.4.9
 voxelize: /usr/local/lib/libopencv_gpu.so.2.4.9
@@ -482,6 +483,7 @@ voxelize: /usr/local/lib/libopencv_highgui.so.2.4.9
 voxelize: /usr/local/lib/libopencv_imgproc.so.2.4.9
 voxelize: /usr/local/lib/libopencv_flann.so.2.4.9
 voxelize: /usr/local/lib/libopencv_core.so.2.4.9
+voxelize: /usr/local/lib/libblas.a
 voxelize: CMakeFiles/voxelize.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable voxelize"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/voxelize.dir/link.txt --verbose=$(VERBOSE)

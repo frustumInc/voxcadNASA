@@ -1,3 +1,7 @@
-*.o
 *.swp
 *.jpg
+*.bcx
+*.vxc
+*.lic
+*.jpg
+*.so

@@ -150,19 +150,15 @@ CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o: Voxelyze/VX_Sim.h
 CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o: Voxelyze/VX_SimGA.cpp
 CMakeFiles/voxelize.dir/Voxelyze/VX_SimGA.cpp.o: Voxelyze/VX_SimGA.h
 
-CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/OpenGLInclude.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/Utils/GL_Utils.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/Utils/Mesh.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/Utils/Vec3D.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/Utils/XML_Rip.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/Utils/tinyxml.h
-CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/VXS_Bond.h
-CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/VXS_Voxel.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/VX_Environment.h
+CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/VX_FEA.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/VX_FRegion.h
-CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/VX_MeshUtil.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/VX_Object.h
-CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/VX_Sim.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: Voxelyze/main.cpp
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: /usr/local/include/opencv/cv.h
 CMakeFiles/voxelize.dir/Voxelyze/main.cpp.o: /usr/local/include/opencv/highgui.h

@@ -13,6 +13,10 @@ See <http://www.opensource.org/licenses/lgpl-3.0.html> for license details.
 #include <iomanip>
 #include <iostream>
 #include <fstream>
+#include "tbb/tbb.h"
+#include "tbb/parallel_for.h"
+#include "tbb/blocked_range.h"
+#include "tbb/concurrent_vector.h"
 
 //#include <stdio.h>
 
@@ -32,7 +36,7 @@ See <http://www.opensource.org/licenses/lgpl-3.0.html> for license details.
 //VERSION 5
 
 #ifdef USE_PARDISO
-#pragma comment (lib, "libpardiso410_WIN_X86_P.lib") //link to the Pardiso library
+#pragma comment (lib, "libpardiso500-GNU481-X86-64.so") //link to the Pardiso library
 extern "C" int PARDISOINIT (void* pt, int* mtype, int* solver, int* iparm, double* dparm, int* error);
 extern "C" int PARDISO (void* pt, int* maxfct, int* mnum, int* mtype, int* phase, int* n, double* a, int* ia, int* ja, int* perm, int* nrhs, int* iparm, int* msglvl, double* b, double* x, int* error, double* dparm);
 #endif
@@ -88,7 +92,7 @@ CVX_FEA::CVX_FEA(void)
 	ResetFEA();
 
 	WantForces = true;
-	PrescribedDisp = true;
+	PrescribedDisp = false;
 
 	CurProgTick = 0;
 	CurProgMaxTick = 1;
@@ -183,7 +187,8 @@ void CVX_FEA::ResetFEA(void) //clears everything and returns to initial state. (
 
 	DOF = -1;
 
-	ViewMode = VIEW_DISP;
+	//ViewMode = VIEW_DISP;
+	ViewMode = VIEW_STRAIN;
 	ViewModeDir = MAXDIR;
 #ifdef USE_OPEN_GL
 	ViewThresh = 0.0f;
@@ -226,7 +231,7 @@ bool CVX_FEA::Solve(std::string* RetMessage) //formulates and solves system!
 	ApplyFixed(); //needs to be called after apply forces for prescribed displacement to work
 	ConsolidateA(); //removes zeros, help, but only marginally. (maybe pardiso does this internally?)
 
-//	int Before2 = (int)GetTickCount();
+	//int Before2 = (int)GetTickCount();
 
 	if (DOF == 0){ if (RetMessage) *RetMessage +=  "No free degrees of freedom found. Aborting.\n"; return false;}
 
@@ -875,8 +880,21 @@ void CVX_FEA::ConsolidateA() //gets rid of all the zeros for quicker solving! (m
 	}
 }
 
+int DOFInd = 0;
+typedef tbb::mutex progressMutex;
+static progressMutex pm;
+
+int CVX_FEA::update_DOFInd(){
+	progressMutex::scoped_lock lock;
+	lock.acquire(pm);
+	DOFInd++;
+	lock.release();
+}
+
 void CVX_FEA::ApplyFixed()
+
 {
+	
 	int DOFInd = 0;
 	Vec3D<> point;
 	Vec3D<> size = pEnv->pObj->GetLatDimEnv()/2.0;
@@ -886,28 +904,72 @@ void CVX_FEA::ApplyFixed()
 
 	int NumPossVox = pEnv->pObj->GetStArraySize();
 	int NumVox =  pEnv->pObj->GetNumVox();
+
+	std::cout << "num poss :" << NumPossVox<<std::endl;
+	std::cout << "num vox	 :" << NumVox<<std::endl;
+
+	//int cores = 8;
+	//size_t voxel_index = pEnv->pObj->GetStArraySize();
+	//tbb::parallel_for(tbb::blocked_range<size_t>(0, voxel_index, voxel_index/cores),
+	//		[=](const tbb::blocked_range<size_t>& r) -> void {
+	//			for(size_t voxel_index = r.begin(); voxel_index != r.end(); voxel_index++ ){
+	//				
+	//				if (pEnv->pObj->GetMat(voxel_index) != 0){ //if there's a voxel here...
+	//					
+	//					FixedList[DOFInd] = false; //assume not fixed
+	//					Vec3D<> point = pEnv->pObj->GetXYZ(voxel_index);
+	//					Vec3D<> size = pEnv->pObj->GetLatDimEnv()/2.0;
+	//				    Vec3D<> WSSize = pEnv->pObj->GetWorkSpace();
+
+	//					//Do fixed constraints
+	//					for (int j = 0; j<(int)pEnv->GetNumBCs(); j++){ //go through each primitive defined as a constraint!
+	//						CVX_FRegion* pThisBC = pEnv->GetBC(j);
+	//							
+	//						if (IS_FIXED(DOF_ALL, pThisBC->DofFixed) && pThisBC->GetRegion()->IsTouching(&point, &size, &WSSize)){ //if this point is within	
+
+	//							FixedList[DOFInd] = true; //set this one as fixed
+	//							if (PrescribedDisp){
+	//								x[DOFInd*DOFperBlock] += pThisBC->Displace.x; //note if there's a prescribed displacement...
+	//								x[DOFInd*DOFperBlock+1] += pThisBC->Displace.y;
+	//								x[DOFInd*DOFperBlock+2] += pThisBC->Displace.z;	
+	//							}	
+	//						}
+	//					}
+	//					update_DOFInd();
+	//				}
+	//			}				
+	//		});
+			
+
+	std::cout << "dof : "<< DOFInd <<std::endl;
 	for (int i=0; i<NumPossVox; i++){ //for all posible voxels:
+		
+
 		if (pEnv->pObj->GetMat(i) != 0){ //if there's a voxel here...
 			FixedList[DOFInd] = false; //assume not fixed
 			point = pEnv->pObj->GetXYZ(i);
 
 			//Do fixed constraints
 			for (int j = 0; j<(int)pEnv->GetNumBCs(); j++){ //go through each primitive defined as a constraint!
-				CVX_FRegion* pThisBC = pEnv->GetBC(i);
-				if (IS_FIXED(DOF_ALL, pThisBC->DofFixed) && pThisBC->GetRegion()->IsTouching(&point, &size, &WSSize)){ //if this point is within
+				CVX_FRegion* pThisBC = pEnv->GetBC(j);
+				
+
+				if (IS_FIXED(DOF_ALL, pThisBC->DofFixed) && pThisBC->GetRegion()->IsTouching(&point, &size, &WSSize)){ //if this point is within	
+
 					FixedList[DOFInd] = true; //set this one as fixed
 					if (PrescribedDisp){
 						x[DOFInd*DOFperBlock] += pThisBC->Displace.x; //note if there's a prescribed displacement...
 						x[DOFInd*DOFperBlock+1] += pThisBC->Displace.y;
-						x[DOFInd*DOFperBlock+2] += pThisBC->Displace.z;
-					}
-
+						x[DOFInd*DOFperBlock+2] += pThisBC->Displace.z;	
+					}	
 				}
 			}
 			DOFInd++;
 		}
 	}
 
+
+	std::cout << "applying fixed regions" <<std::endl;
 
 	//aply reverse forces to make prescribed displacements... (x vector should have non-zero parts in it...)
 	if (PrescribedDisp){
@@ -973,7 +1035,7 @@ void CVX_FEA::ApplyFixed()
 			}
 		}
 	}
-
+		std::cout << "finished applying fixed regions" <<std::endl;
 }
 
 void CVX_FEA::ApplyForces()
@@ -1223,17 +1285,17 @@ void CVX_FEA::DrawFEA(int Selected)
 
 					glLoadName (i); //to enable picking
 					pEnv->pObj->GetXYZ(&Center, i);
-					if (ViewDefPerc != 0.0f){
-						glTranslated(Center.x + x[index*DOFperBlock] / Disp.Max * pEnv->pObj->GetLatticeDim() * ViewDefPerc, Center.y + x[index*DOFperBlock+1]/Disp.Max*pEnv->pObj->GetLatticeDim()*ViewDefPerc, Center.z + x[index*DOFperBlock+2]/Disp.Max*pEnv->pObj->GetLatticeDim()*ViewDefPerc);
-						if (DOFperBlock == 6){ //if we have rotation data
-							glRotated(x[index*DOFperBlock+3]*360/(2*3.14159) / Disp.Max * pEnv->pObj->GetLatticeDim() * ViewDefPerc, 1, 0, 0);
-							glRotated(x[index*DOFperBlock+4]*360/(2*3.14159) / Disp.Max * pEnv->pObj->GetLatticeDim() * ViewDefPerc, 0, 1, 0);
-							glRotated(x[index*DOFperBlock+5]*360/(2*3.14159) / Disp.Max * pEnv->pObj->GetLatticeDim() * ViewDefPerc, 0, 0, 1);
+					//if (ViewDefPerc != 0.0f){
+					//	glTranslated(Center.x + x[index*DOFperBlock] / Disp.Max * pEnv->pObj->GetLatticeDim() * ViewDefPerc, Center.y + x[index*DOFperBlock+1]/Disp.Max*pEnv->pObj->GetLatticeDim()*ViewDefPerc, Center.z + x[index*DOFperBlock+2]/Disp.Max*pEnv->pObj->GetLatticeDim()*ViewDefPerc);
+					//	if (DOFperBlock == 6){ //if we have rotation data
+					//		glRotated(x[index*DOFperBlock+3]*360/(2*3.14159) / Disp.Max * pEnv->pObj->GetLatticeDim() * ViewDefPerc, 1, 0, 0);
+					//		glRotated(x[index*DOFperBlock+4]*360/(2*3.14159) / Disp.Max * pEnv->pObj->GetLatticeDim() * ViewDefPerc, 0, 1, 0);
+					//		glRotated(x[index*DOFperBlock+5]*360/(2*3.14159) / Disp.Max * pEnv->pObj->GetLatticeDim() * ViewDefPerc, 0, 0, 1);
 
-						}
-					}
-					else 
-						glTranslated(Center.x, Center.y, Center.z);
+					//	}
+					//}
+					//else 
+					glTranslated(Center.x, Center.y, Center.z);
 
 					Center = Vec3D<>(0,0,0);
 					pEnv->pObj->DrawVoxel(&Center, pEnv->pObj->GetLatticeDim());
